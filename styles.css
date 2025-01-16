@@ -1,0 +1,15 @@
+body { 
+    background-color: rgb(157, 157, 184);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a{
+    padding: 15px;
+    color:rgb(57, 1, 116);
+    font-size: 20px;
+}
+
+img{
+    height: 10%;
+    width: 10%;
+}
