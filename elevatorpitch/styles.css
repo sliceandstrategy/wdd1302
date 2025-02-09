@@ -290,4 +290,13 @@ footer .social img {
     margin-top: 25px;
   }
 }
-
+#pitch{
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 20px 20px 20px;
+}
+.pitch h2{
+    font-family: "Bradley Hand", sans-serif;
+    color: #18293b;
+    font-size: large;
+}
