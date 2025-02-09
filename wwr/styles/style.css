@@ -1,18 +1,22 @@
-/* Content Container */
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
 #content {
   max-width: 1600px;
   margin: 0 auto;
 }
 
-/* Centering Elements */
 nav a {
-  text-align: center;
   text-decoration: none;
+  color: #fcfbfb;
+  text-align: center;
+  padding: 35px;
 }
 
 #hero-msg h1,
 #hero-msg h4 {
   text-align: center;
+  font-family: "Rock Salt", "Bradley Hand", sans-serif;
 }
 
 .button-box {
@@ -23,14 +27,22 @@ main section {
   text-align: center;
 }
 
-/* Background Heights */
 #background {
   height: 725px;
+  margin-bottom: 50px;
 }
 
-/* Background Colors */
 body {
   background-color: #fcfbfb;
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0 0 40px 0;
+}
+
+h2 {
+  margin: 0;
+  font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
 }
 
 header {
@@ -44,11 +56,18 @@ nav a:hover {
 .book,
 .join {
   background-color: #d9c2a3;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px 30px;
+  margin-top: 50px;
+  border-radius: 5px;
 }
 
 .book:hover,
 .join:hover {
   background-color: #6f7364;
+  color: #fcfbfb;
 }
 
 #background {
@@ -57,13 +76,17 @@ nav a:hover {
 
 .msg {
   background-color: #6f7364;
+  line-height: 1.5em;
+  padding: 35px;
+  margin-top: 150px;
 }
 
 footer {
   background-color: #6f7364;
+  padding: 25px 50px;
+  margin-top: 200px;
 }
 
-/* Text Colors */
 nav a {
   color: #fcfbfb;
 }
@@ -74,10 +97,14 @@ nav a:hover {
 
 .home-title {
   color: #d9c2a3;
+  font-family: "Rock Salt", "Bradley Hand", sans-serif;
+  font-size: 2em;
+  margin-top: 10px;
 }
 
 h4 {
-  color: #d9c2a3;
+  font-family:  Arial, sans-serif;
+  color: black;
 }
 
 .book,
@@ -96,6 +123,8 @@ h4 {
 
 .msg p {
   color: #fcfbfb;
+  font-size: .8em;
+  padding-bottom: 15px;
 }
 
 footer {
@@ -111,34 +140,19 @@ footer a:hover {
   color: #fcfbfb;
 }
 
-/* Image Widths */
 .logo {
   width: 80px;
 }
 
 .icon {
   width: 80px;
+  padding-top: 10px;
 }
 
 #hero-img {
   width: 100%;
 }
 
-/* Link Decorations */
-nav a {
-  text-decoration: none;
-}
-
-.book,
-.join {
-  text-decoration: none;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-/* Footer Styles */
 footer p {
   font-size: 1.2em;
 }
@@ -146,4 +160,28 @@ footer p {
 footer p a:hover {
   text-decoration: underline;
 }
+
+#logo_link {
+  padding-top: 5px;
+}
+
+.rivers-card,
+.camping-card,
+.rapids-card {
+  margin: 200px 0;
+}
+
+.card-img {
+  border: 10px solid #d9c2a3;
+}
+
+main section img {
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+
+footer .social img {
+  padding-top: 50px;
+}
+mountains 
 
