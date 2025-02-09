@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
+
 /* Reset */
 * {
   margin: 0;
@@ -295,8 +296,8 @@ footer .social img {
     margin: 0 auto;
     padding: 20px 20px 20px 20px;
 }
-.pitch h2{
-    font-family: "Bradley Hand", sans-serif;
+.pitch h3{
+    font-family: "Quicksand", Arial, sans-serif;
     color: #18293b;
-    font-size: large;
+    font-weight: 400;
 }
