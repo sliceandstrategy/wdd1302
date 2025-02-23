@@ -7,6 +7,10 @@ body {
     margin:0 auto;
 }
 
+nav{
+    display flex: ;
+}
+
 nav, footer{
     background-color: antiquewhite;
     padding: 20px;
@@ -31,10 +35,20 @@ h1,h2 {
 
 img{
     height: 10%;
+    display: block;
     width: 10%;
-    margin: 0 auto;
+    margin: 50px auto;
+    border: 2px solid red;
+    box-sizing: border-box;
+    transition: 1s;
+    box-shadow: 5px 5px 20px black;
 }
+img.hover{
+    opacity: .6;
+    transform: scale(1.1);
 
+}
+]
 p{
     text-align: center;
     padding: 30px;
