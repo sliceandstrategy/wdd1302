@@ -1,4 +1,4 @@
-<script>
+
         let slideIndex = 1;
         let slideInterval;
     
@@ -35,4 +35,3 @@
     
         showSlides(slideIndex);
         resetInterval();
-    </script>
