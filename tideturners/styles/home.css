@@ -30,11 +30,13 @@
 
 /* Content section */
 .content-section {
+  display: grid;
   height: 800px;
   background-color: #f1f1f1;
   padding: 50px;
   text-align: center;
 }
+
 
 /* Mobile adjustments */
 @media screen and (max-width: 768px) {
@@ -68,15 +70,6 @@ main section {
   text-align: center;
 }
 
-/* Removing the #background element that creates the beige/tan section */
-/* #background {
-  height: 725px;
-  margin-bottom: 50px;
-  background-color: #d9c2a3;
-  grid-column: 1 / 11;
-  grid-row: 4 / 9;
-} */
-
 body {
   background-color: #fcfbfb;
   font-family: Playfair Display, Arial, sans-serif;
@@ -93,13 +86,12 @@ header {
 
 nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   text-align: center;
-  padding-left: 5em;
 }
 
 #logo_link {
-  padding-top: 5px;
+  padding-top: 10px;
   justify-self: center;
   align-self: center;
 }
@@ -141,7 +133,7 @@ nav {
   box-shadow: 5px 5px 10px #63ac14;
   margin-bottom: 30px;
 
-  /* Create a grid layout within each msg section */
+  /* grid layout within each msg section */
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -150,11 +142,14 @@ nav {
 
 /* Content styling */
 .msg-content {
-  text-align: left;
+  text-align: right;
 }
 
 /* Image styling */
 .msg .ocean {
+  display: grid;
+  grid-row: 1/2;
+  grid-column: 1/2;
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -301,6 +296,7 @@ footer p a:hover {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 15px;
+
 }
 
 @media screen and (max-width: 900px) {

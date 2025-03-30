@@ -1,8 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+/* Parallax container */
+.parallax-container {
+  /* Set a specific height */
+  height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Using the direct image URL */
+  background-image: url("https://sdmntpreastus2.oaiusercontent.com/files/00000000-a618-51f6-85a7-0d9a2b07637a/raw?se=2025-03-30T03%3A24%3A33Z&sp=r&sv=2024-08-04&sr=b&scid=0c3d1c60-c9d3-53cb-a000-011f5054835a&skoid=3f3a9132-9530-48ef-96b7-fee5a811733f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-03-30T01%3A20%3A31Z&ske=2025-03-31T01%3A20%3A31Z&sks=b&skv=2024-08-04&sig=9Ra7JclOHzdeKxncqBQ9VaWZOxF98/MXaXCLZiVNkvw%3D");
+
+  /* For content alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-text {
+  background-color: #006f72;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* Content section */
+.content-section {
+  display: grid;
+  height: 800px;
+  background-color: #f1f1f1;
+  padding: 50px;
+  text-align: center;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  display: inline-block;
+  margin: 20px;
+}
+
+/* Add rounded corners to front and back sides */
+.flip-card-front,
+.flip-card-back {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Add a container for the flip cards to center them */
+.flip-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px auto;
+}
+
+/* Make sure images inside flip cards have rounded corners too */
+.flip-card-front img {
+  border-radius: 15px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #006f72;
+  color: white;
+  transform: rotateY(180deg);
+}
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  .parallax-container {
+    background-attachment: scroll; /* Disable parallax on mobile */
+  }
+}
+
+#content {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fcfbfb;
+  text-align: center;
+  padding: 35px;
+}
+
+#hero-msg h1,
+#hero-msg h4 {
+  text-align: center;
+}
+
+.button-box {
+  text-align: center;
+}
+
+main section {
+  text-align: center;
+}
+
+body {
+  background-color: #fcfbfb;
+  font-family: Playfair Display, Arial, sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #63ac14;
+  display: grid;
+  grid-template-columns: 3 / 4;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#logo_link {
+  padding-top: 10px;
+  justify-self: center;
+  align-self: center;
+}
+
+#hero {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  margin-top: -100px;
+}
+
+#hero-box {
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+  z-index: -1;
+}
+
+#hero-msg {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  margin-top: 100px;
+}
+
+#hero-msg h4 {
+  color: white;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Main message section styling */
+.msg {
+  grid-column: 1 / 11;
+  background-color: #006f72;
+  padding: 35px;
+  box-shadow: 5px 5px 10px #63ac14;
+  margin-bottom: 30px;
+
+  /* grid layout within each msg section */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Content styling */
+.msg-content {
+  text-align: right;
+}
+
+/* Image styling */
+.msg .ocean {
+  display: grid;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+/* Alternate layout for even/odd sections */
+.msg:nth-child(odd) .ocean {
+  order: 1;
+}
+
+.msg:nth-child(odd) .msg-content {
+  order: 2;
+}
+
+.msg:nth-child(even) .ocean {
+  order: 2;
+}
+
+.msg:nth-child(even) .msg-content {
+  order: 1;
+}
+
+.msg h2 {
+  color: #fcfbfb;
+  margin-top: 0;
+}
+
+.msg p {
+  color: #fcfbfb;
+  font-size: 0.8em;
+  line-height: 1.6;
+  padding-bottom: 15px;
+}
+
+/* Try card section */
+.try-card {
+  grid-column: 1 / 11;
+  background-color: #006f72;
+  padding: 35px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.try-card h2 {
+  grid-column: 1 / 4;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.try-img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.try-img:hover {
+  transform: scale(1.05);
+}
+
+nav a:hover {
+  background-color: #006f72;
+  color: white;
+}
+
+.book,
+.join {
+  background-color: #63ac14;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px 30px;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+.book:hover,
+.join:hover {
+  background-color: #006f72;
+  color: #fcfbfb;
+}
+
+.home-title {
+  color: #006f72;
+  font-family: "Rock Salt", "Bradley Hand", sans-serif;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+h4 {
+  color: black;
+}
+
+.logo {
+  width: 80px;
+}
+
+.icon {
+  width: 80px;
+  padding-top: 10px;
+}
+
+#hero-img {
+  width: 100%;
+}
+
+footer {
+  background-color: #006f72;
+  padding: 25px 50px;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer p {
+  font-size: 1.2em;
+}
+
+footer p a {
+  color: #fcfbfb;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: #54eef1;
+  text-decoration: underline;
+}
+
+.button {
+  background-color: #63ac14;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+
+}
+
+@media screen and (max-width: 900px) {
+  #hero,
+  .home-grid {
+    display: block;
+    height: auto;
+  }
+  nav,
+  footer {
+    flex-direction: column;
+  }
+  nav a {
+    display: block;
+    padding: 15px;
+  }
+  #hero {
+    margin-top: 0;
+  }
+  #hero-msg {
+    margin-top: 0;
+  }
+  #hero-msg h4 {
+    display: none;
+  }
+  #hero-msg h1 {
+    color: #6f7364;
+  }
+  .home-title {
+    font-size: 25px;
+  }
+
+  /* Remove background on mobile too */
+  #background {
+    display: none;
+  }
+
+  footer {
+    margin-top: 25px;
+  }
+
+  /* Mobile responsive adjustments */
+  .msg {
+    grid-template-columns: 1fr;
+  }
+
+  .msg .ocean,
+  .msg .msg-content,
+  .msg:nth-child(odd) .ocean,
+  .msg:nth-child(odd) .msg-content,
+  .msg:nth-child(even) .ocean,
+  .msg:nth-child(even) .msg-content {
+    order: 0; /* Reset the order */
+  }
+
+  /* Always put image on top, content below on mobile */
+  .msg .ocean {
+    margin-bottom: 20px;
+  }
+}
+
 * {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1200px;
+  max-width: 100%;
   position: relative;
   margin: auto;
 }
@@ -41,13 +468,14 @@
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  display: grid;
+  color: #54eef1;
   font-size: 15px;
   padding: 8px 12px;
-  position: absolute;
   bottom: 8px;
   width: 100%;
   text-align: center;
+  margin-top: ;
 }
 
 /* Number text (1/3 etc) */
