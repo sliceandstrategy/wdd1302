@@ -218,6 +218,8 @@ nav {
 nav a:hover {
   background-color: #006f72;
   color: white;
+  transition: .5s;
+  border-radius: 5px;
 }
 
 .book,
