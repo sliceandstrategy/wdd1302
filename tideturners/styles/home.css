@@ -56,7 +56,7 @@ body {
 header {
   background-color: #63ac14;
   display: grid;
-  grid-template-columns: 3 / 4;
+  grid-template-columns: 1fr 3fr 1fr; /* Fixed: Changed from invalid "3 / 4" to proper grid columns */
 }
 
 nav {
