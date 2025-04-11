@@ -56,13 +56,16 @@ body {
 header {
   background-color: #63ac14;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr; /* Fixed: Changed from invalid "3 / 4" to proper grid columns */
+  grid-template-columns: 1fr; /* Changed to a single column for centered nav */
+  justify-items: center; /* Center items horizontally in the grid */
 }
 
 nav {
   display: flex;
   justify-content: center;
   text-align: center;
+  width: 100%; /* Ensure nav takes full width */
+  max-width: 800px; /* Optional: limit the maximum width */
 }
 
 nav a {
