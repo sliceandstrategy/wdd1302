@@ -34,13 +34,16 @@ body {
 header {
   background-color: var(--accent-color);
   display: grid;
-  grid-template-columns: 3 / 4;
+  grid-template-columns: 1fr; /* Fixed: Changed from invalid "3 / 4" to a single column */
+  justify-items: center; /* Center items horizontally */
 }
 
 nav {
   display: flex;
   justify-content: center;
   text-align: center;
+  width: 100%;
+  max-width: 800px; /* Optional: limit the maximum width */
 }
 
 nav a {
@@ -584,4 +587,3 @@ footer p a:hover {
     padding: 15px;
   }
 }
-
