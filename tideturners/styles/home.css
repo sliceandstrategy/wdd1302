@@ -1,3 +1,4 @@
+/* Import Google Fonts with proper quotes */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
 /* Parallax container */
@@ -37,12 +38,13 @@
   text-align: center;
 }
 
-
-/* Mobile adjustments */
-@media screen and (max-width: 768px) {
-  .parallax-container {
-    background-attachment: scroll; /* Disable parallax on mobile */
-  }
+/* Base styles */
+body {
+  background-color: #fcfbfb;
+  font-family: "Playfair Display", Arial, sans-serif; /* Fixed: Added quotes around font name with spaces */
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
 }
 
 #content {
@@ -50,34 +52,7 @@
   margin: 0 auto;
 }
 
-nav a {
-  text-decoration: none;
-  color: #fcfbfb;
-  text-align: center;
-  padding: 35px;
-}
-
-#hero-msg h1,
-#hero-msg h4 {
-  text-align: center;
-}
-
-.button-box {
-  text-align: center;
-}
-
-main section {
-  text-align: center;
-}
-
-body {
-  background-color: #fcfbfb;
-  font-family: Playfair Display, Arial, sans-serif;
-  font-size: 22px;
-  margin: 0;
-  padding: 0;
-}
-
+/* Header and Navigation */
 header {
   background-color: #63ac14;
   display: grid;
@@ -90,12 +65,27 @@ nav {
   text-align: center;
 }
 
+nav a {
+  text-decoration: none;
+  color: #fcfbfb;
+  text-align: center;
+  padding: 35px;
+}
+
+nav a:hover {
+  background-color: #006f72;
+  color: white;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
 #logo_link {
   padding-top: 10px;
   justify-self: center;
   align-self: center;
 }
 
+/* Hero section */
 #hero {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
@@ -114,10 +104,27 @@ nav {
   margin-top: 100px;
 }
 
+#hero-msg h1,
+#hero-msg h4 {
+  text-align: center;
+}
+
 #hero-msg h4 {
   color: white;
 }
 
+#hero-img {
+  width: 100%;
+}
+
+.home-title {
+  color: #006f72;
+  font-family: "Rock Salt", "Bradley Hand", sans-serif;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+/* Main content grid */
 .home-grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -145,11 +152,23 @@ nav {
   text-align: right;
 }
 
+.msg h2 {
+  color: #fcfbfb;
+  margin-top: 0;
+}
+
+.msg p {
+  color: #fcfbfb;
+  font-size: 0.8em;
+  line-height: 1.6;
+  padding-bottom: 15px;
+}
+
 /* Image styling */
 .msg .ocean {
   display: grid;
-  grid-row: 1/2;
-  grid-column: 1/2;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -172,18 +191,6 @@ nav {
 
 .msg:nth-child(even) .msg-content {
   order: 1;
-}
-
-.msg h2 {
-  color: #fcfbfb;
-  margin-top: 0;
-}
-
-.msg p {
-  color: #fcfbfb;
-  font-size: 0.8em;
-  line-height: 1.6;
-  padding-bottom: 15px;
 }
 
 /* Try card section */
@@ -215,11 +222,9 @@ nav {
   transform: scale(1.05);
 }
 
-nav a:hover {
-  background-color: #006f72;
-  color: white;
-  transition: .5s;
-  border-radius: 5px;
+/* Buttons and links */
+.button-box {
+  text-align: center;
 }
 
 .book,
@@ -239,13 +244,21 @@ nav a:hover {
   color: #fcfbfb;
 }
 
-.home-title {
-  color: #006f72;
-  font-family: "Rock Salt", "Bradley Hand", sans-serif;
-  font-size: 2em;
-  margin-top: 10px;
+.button {
+  background-color: #63ac14;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
 }
 
+/* Misc elements */
 h4 {
   color: black;
 }
@@ -259,10 +272,11 @@ h4 {
   padding-top: 10px;
 }
 
-#hero-img {
-  width: 100%;
+main section {
+  text-align: center;
 }
 
+/* Footer */
 footer {
   background-color: #006f72;
   padding: 25px 50px;
@@ -286,19 +300,11 @@ footer p a:hover {
   text-decoration: underline;
 }
 
-.button {
-  background-color: #63ac14;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 15px;
-
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  .parallax-container {
+    background-attachment: scroll; /* Disable parallax on mobile */
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -307,26 +313,33 @@ footer p a:hover {
     display: block;
     height: auto;
   }
+
   nav,
   footer {
     flex-direction: column;
   }
+
   nav a {
     display: block;
     padding: 15px;
   }
+
   #hero {
     margin-top: 0;
   }
+
   #hero-msg {
     margin-top: 0;
   }
+
   #hero-msg h4 {
     display: none;
   }
+
   #hero-msg h1 {
     color: #6f7364;
   }
+
   .home-title {
     font-size: 25px;
   }
@@ -359,4 +372,3 @@ footer p a:hover {
     margin-bottom: 20px;
   }
 }
-
